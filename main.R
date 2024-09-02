@@ -2,12 +2,13 @@ library(yaml)
 library(readr)
 library(glue)
 library(jsonlite)
+library(glmnet)
 
 source("funcoes.R")
 
-config <- read_yaml("config.yaml")
+config = read_yaml("config.yaml")
 
-dados <- read_csv(glue("entradas/{config$tabela}"))
+dados = read_csv(glue("entradas/{config$tabela}"))
 
 source("treinamento.R")
 source("predicao.R")

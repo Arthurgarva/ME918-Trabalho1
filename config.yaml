@@ -1,5 +1,6 @@
 tabela: iris.csv
-metodo: linear
+metodo: lasso
+lambda: 
 colunas:
   preditiva:
    - Sepal.Length
