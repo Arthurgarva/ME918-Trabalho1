@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# ME918-Trabalho1
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Passos para rodar seu produto:
+
+1)Adicione seu banco de dados ".csv" a pasta "entradas".
+
+2)Abra o arquivo "config.yaml" e altere as variáveis como a seguir:
+
+tabela: banco_de_dados.csv (nome do arquivo de banco de dados)
+
+dadosjson: novos_dados.json (nome do arquivo .json que vai adicionar os valores das variáveis preditoras que serão utilizadas para gerar a preditiva. Ou altere os nomes das variáveis e dos valores pelos do seu banco de dados )
+
+metodo: "linear" ou "lasso" (tipo de regressão desejada)
+
+lambda: número desejado ou deixe em branco se quiser fazer a validação cruzada
+(somente nescessario no caso da regressão lasso)
+
+colunas:
+  preditiva:
+   - nome da coluna que deseja predizer
+  preditoras:(quantas colunas quiser)
+   - nome de uma das colunas que deseja utilizar para predizer a preditiva
+   - nome de uma das colunas que deseja utilizar para predizer a preditiva
+   - nome de uma das colunas que deseja utilizar para predizer a preditiva
+   
+3)Abra e rode o arquivo "main.R". 
+
+4)Encontre seus resultados na pasta saída.
