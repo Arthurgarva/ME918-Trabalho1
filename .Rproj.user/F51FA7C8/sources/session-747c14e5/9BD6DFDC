@@ -1,26 +1,26 @@
 {
-    "id": "9700438D",
-    "path": "~/GitHub/ME918-Trabalho1/main.R",
-    "project_path": "main.R",
+    "id": "9BD6DFDC",
+    "path": "~/GitHub/ME918-Trabalho1/funcoes.R",
+    "project_path": "funcoes.R",
     "type": "r_source",
-    "hash": "1158742901",
+    "hash": "103930450",
     "contents": "",
     "dirty": false,
-    "created": 1725312701567.0,
+    "created": 1725315908775.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 4,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "5,0",
-        "scrollLine": "0"
+        "cursorPosition": "26,38",
+        "scrollLine": "9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725314894,
+    "lastKnownWriteTime": 1725316140,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725314894674,
+    "last_content_update": 1725316140150,
     "read_only": false,
     "read_only_alternatives": []
 }

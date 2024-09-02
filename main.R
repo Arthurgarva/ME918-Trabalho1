@@ -1,13 +1,9 @@
-
-packages = c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
-
-install.packages(setdiff(packages, rownames(installed.packages())))
-
-lapply(packages, library, character.only = TRUE)
-
-
-usethis::use_readme_rmd()
+pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
 source("funcoes.R")
+instala_pacotes(pacotes)
+lapply(pacotes, library, character.only = TRUE)
+
+#usethis::use_readme_rmd()
 
 config = read_yaml("config.yaml")
 

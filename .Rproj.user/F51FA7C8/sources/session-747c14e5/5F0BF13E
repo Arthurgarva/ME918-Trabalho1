@@ -1,12 +1,12 @@
 {
-    "id": "3EAA7117",
+    "id": "5F0BF13E",
     "path": "~/GitHub/ME918-Trabalho1/entradas/novos_dados.json",
     "project_path": "entradas/novos_dados.json",
     "type": "json",
-    "hash": "623073833",
+    "hash": "3490640204",
     "contents": "",
     "dirty": false,
-    "created": 1725312875195.0,
+    "created": 1725315879740.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
@@ -16,11 +16,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725314680,
+    "lastKnownWriteTime": 1725316191,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725314680144,
+    "last_content_update": 1725316191631,
     "read_only": false,
     "read_only_alternatives": []
 }

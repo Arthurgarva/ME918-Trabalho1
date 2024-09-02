@@ -19,3 +19,11 @@ modelo_lasso = function(tabela,preditiva,preditoras,lambda){
   }
   return(model_cv)
 }
+
+instala_pacotes <- function(pacotes) {
+  faltantes_pacotes <- setdiff(pacotes, rownames(installed.packages()))
+  
+  if (length(faltantes_pacotes) > 0) {
+    install.packages(faltantes_pacotes, dependencies = TRUE, type = "binary")
+  }
+}

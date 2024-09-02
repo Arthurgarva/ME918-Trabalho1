@@ -1,0 +1,29 @@
+modelo_lin = function(tabela, preditiva, preditoras){
+  regression = glue(preditiva,"~",paste(preditoras,collapse = " + "))
+  ajuste = lm(as.formula(regression), data = tabela)
+  return(ajuste)
+}
+modelo_lasso = function(tabela,preditiva,preditoras,lambda){
+  x = as.matrix(tabela[,preditoras])
+  y = unlist(tabela[,preditiva])
+  if (is.null(lambda) == TRUE){
+    lambdas_to_try = 10^seq(-3, 5, length.out = 100)
+    lasso_cv = cv.glmnet(x, y, alpha = 1, lambda = lambdas_to_try,
+                          standardize = TRUE, nfolds = 10)
+    lambda_best = lasso_cv$lambda.min
+    model_cv = glmnet(x, y, alpha = 1,
+                       lambda = lambda_best, standardize = TRUE)
+  } else if (is.null(lambda) == FALSE){
+    model_cv = glmnet(x, y, alpha = 1, 
+                       lambda = lambda, standardize = TRUE)
+  }
+  return(model_cv)
+}
+
+instala_pacotes <- function(pacotes) {
+  faltantes_pacotes <- setdiff(pacotes, rownames(installed.packages()))
+  
+  if (length(faltantes_pacotes) > 0) {
+    install.packages(faltantes_pacotes, dependencies = TRUE, type = "binary")
+  }
+}
