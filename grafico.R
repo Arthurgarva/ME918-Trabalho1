@@ -1,5 +1,4 @@
-library(ggplot2)
-library(glue)
+
 
 if (inherits(modelo, "lm")) {
   predicoes_dados = predict(modelo, newdata = dados[,config$colunas$preditoras])

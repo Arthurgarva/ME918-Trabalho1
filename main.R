@@ -1,8 +1,11 @@
-library(yaml)
-library(readr)
-library(glue)
-library(jsonlite)
-library(glmnet)
+
+packages = c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
+
+install.packages(setdiff(packages, rownames(installed.packages())))
+
+lapply(packages, library, character.only = TRUE)
+
+
 usethis::use_readme_rmd()
 source("funcoes.R")
 
