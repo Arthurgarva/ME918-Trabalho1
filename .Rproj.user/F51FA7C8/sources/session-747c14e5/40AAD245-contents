@@ -45,7 +45,7 @@ O formato deve seguir o seguinte padrão:
    - nome da variável 2 que deseja utilizar para predizer a preditiva <br>
    - nome da variável n que deseja utilizar para predizer a preditiva <br>
    
-**3)** Abra e rode todas as linhas do arquivo "main.R". 
+**3)** Rode o programa "RodarPrograma.bat". 
 
 **4)** Na pasta saída serão encontrados os resultados do seu produto:
 
