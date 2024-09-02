@@ -1,0 +1,14 @@
+library(yaml)
+library(readr)
+library(glue)
+library(jsonlite)
+
+source("funcoes.R")
+
+config <- read_yaml("config.yaml")
+
+dados <- read_csv(glue("entradas/{config$tabela}"))
+
+source("treinamento.R")
+source("predicao.R")
+source("grafico.R")

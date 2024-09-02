@@ -1,0 +1,9 @@
+tabela: iris.csv
+metodo: linear
+colunas:
+  preditiva:
+   - Sepal.Length
+  preditoras:
+   - Sepal.Width
+   - Petal.Length
+   - Petal.Width
