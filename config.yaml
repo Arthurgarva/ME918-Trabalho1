@@ -1,6 +1,6 @@
 tabela: iris.csv
 dadosjson: novos_dados.json
-metodo: lasso
+metodo: ridge
 lambda: 
 colunas:
   preditiva:

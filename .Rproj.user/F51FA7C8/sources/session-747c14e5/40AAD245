@@ -3,7 +3,7 @@
     "path": "~/GitHub/ME918-Trabalho1/README.Rmd",
     "project_path": "README.Rmd",
     "type": "r_markdown",
-    "hash": "2644330139",
+    "hash": "526833273",
     "contents": "",
     "dirty": false,
     "created": 1725312169191.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "47,44",
-        "scrollLine": "37"
+        "cursorPosition": "34,40",
+        "scrollLine": "28"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725317044,
+    "lastKnownWriteTime": 1725318223,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725317044643,
+    "last_content_update": 1725318223308,
     "read_only": false,
     "read_only_alternatives": []
 }

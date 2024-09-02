@@ -1,4 +1,4 @@
-pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
+pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2", "vroom")
 source("funcoes.R")
 instala_pacotes(pacotes)
 lapply(pacotes, library, character.only = TRUE)

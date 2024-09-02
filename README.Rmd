@@ -32,7 +32,7 @@ O formato deve seguir o seguinte padrão:
   {"Variavel 1": valor da variavel 1, "Variavel 2": valor da variavel 2, "Variavel n": valor da variavel n}<br>
 ]<br>
 
-**metodo:** "linear" ou "lasso" (tipo de regressão desejada)
+**metodo:** "linear","lasso" ou "ridge" (tipo de regressão desejada)
 
 **lambda:** número desejado para lambda ou deixe em branco se quiser fazer a validação cruzada
 (somente nescessario no caso da regressão lasso)

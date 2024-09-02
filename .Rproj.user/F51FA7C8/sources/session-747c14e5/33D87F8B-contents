@@ -1,0 +1,11 @@
+tabela: iris.csv
+dadosjson: novos_dados.json
+metodo: ridge
+lambda: 
+colunas:
+  preditiva:
+   - Sepal.Length
+  preditoras:
+   - Sepal.Width
+   - Petal.Length
+   - Petal.Width

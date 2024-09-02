@@ -7,17 +7,34 @@ modelo_lasso = function(tabela,preditiva,preditoras,lambda){
   x = as.matrix(tabela[,preditoras])
   y = unlist(tabela[,preditiva])
   if (is.null(lambda) == TRUE){
-    lambdas_to_try = 10^seq(-3, 5, length.out = 100)
-    lasso_cv = cv.glmnet(x, y, alpha = 1, lambda = lambdas_to_try,
+    lambdas = 10^seq(-3, 5, length.out = 100)
+    lasso_cv = cv.glmnet(x, y, alpha = 1, lambda = lambdas,
                           standardize = TRUE, nfolds = 10)
-    lambda_best = lasso_cv$lambda.min
-    model_cv = glmnet(x, y, alpha = 1,
-                       lambda = lambda_best, standardize = TRUE)
+    lambda_melhor = lasso_cv$lambda.min
+    modelo_cv = glmnet(x, y, alpha = 1,
+                       lambda = lambda_melhor, standardize = TRUE)
   } else if (is.null(lambda) == FALSE){
-    model_cv = glmnet(x, y, alpha = 1, 
+    modelo_cv = glmnet(x, y, alpha = 1, 
                        lambda = lambda, standardize = TRUE)
   }
-  return(model_cv)
+  return(modelo_cv)
+}
+
+modelo_ridge = function(tabela,preditiva,preditoras,lambda){
+  x = as.matrix(tabela[,preditoras])
+  y = unlist(tabela[,preditiva])
+  if (is.null(lambda) == TRUE){
+    lambdas = 10^seq(-3, 5, length.out = 100)
+    ridge_cv = cv.glmnet(x, y, alpha = 0, lambda = lambdas,
+                         standardize = TRUE, nfolds = 10)
+    lambda_melhor = ridge_cv$lambda.min
+    modelo_cv = glmnet(x, y, alpha = 0,
+                      lambda = lambda_melhor, standardize = TRUE)
+  } else if (is.null(lambda) == FALSE){
+    modelo_cv = glmnet(x, y, alpha = 0, 
+                      lambda = lambda, standardize = TRUE)
+  }
+  return(modelo_cv)
 }
 
 instala_pacotes = function(pacotes) {

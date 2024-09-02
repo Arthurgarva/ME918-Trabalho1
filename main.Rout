@@ -17,12 +17,24 @@ Digite 'q()' para sair do R.
 
 [Área de trabalho anterior carregada]
 
-> pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
+> pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2", "vroom")
 > source("funcoes.R")
 > instala_pacotes(pacotes)
 > lapply(pacotes, library, character.only = TRUE)
 Carregando pacotes exigidos: Matrix
 Loaded glmnet 4.1-8
+
+Attaching package: 'vroom'
+
+The following objects are masked from 'package:readr':
+
+    as.col_spec, col_character, col_date, col_datetime, col_double,
+    col_factor, col_guess, col_integer, col_logical, col_number,
+    col_skip, col_time, cols, cols_condense, cols_only, date_names,
+    date_names_lang, date_names_langs, default_locale, fwf_cols,
+    fwf_empty, fwf_positions, fwf_widths, locale, output_column,
+    problems, spec
+
 [[1]]
 [1] "yaml"      "stats"     "graphics"  "grDevices" "utils"     "datasets" 
 [7] "methods"   "base"     
@@ -49,6 +61,11 @@ Loaded glmnet 4.1-8
  [7] "yaml"      "stats"     "graphics"  "grDevices" "utils"     "datasets" 
 [13] "methods"   "base"     
 
+[[7]]
+ [1] "vroom"     "ggplot2"   "glmnet"    "Matrix"    "jsonlite"  "glue"     
+ [7] "readr"     "yaml"      "stats"     "graphics"  "grDevices" "utils"    
+[13] "datasets"  "methods"   "base"     
+
 Warning messages:
 1: package 'glmnet' was built under R version 4.3.3 
 2: package 'Matrix' was built under R version 4.3.3 
@@ -70,18 +87,6 @@ dbl (5): ...1, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 > 
 > source("treinamento.R")
-
-Attaching package: 'vroom'
-
-The following objects are masked from 'package:readr':
-
-    as.col_spec, col_character, col_date, col_datetime, col_double,
-    col_factor, col_guess, col_integer, col_logical, col_number,
-    col_skip, col_time, cols, cols_condense, cols_only, date_names,
-    date_names_lang, date_names_langs, default_locale, fwf_cols,
-    fwf_empty, fwf_positions, fwf_widths, locale, output_column,
-    problems, spec
-
 New names:
 • `` -> `...1`
 Rows: 150 Columns: 6
@@ -98,4 +103,4 @@ Saving 7 x 7 in image
 > 
 > proc.time()
   usuário   sistema decorrido 
-     4.15      0.68      4.84 
+     4.09      0.89      5.15 
