@@ -1,0 +1,101 @@
+
+R version 4.3.1 (2023-06-16 ucrt) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R é um software livre e vem sem GARANTIA ALGUMA.
+Você pode redistribuí-lo sob certas circunstâncias.
+Digite 'license()' ou 'licence()' para detalhes de distribuição.
+
+R é um projeto colaborativo com muitos contribuidores.
+Digite 'contributors()' para obter mais informações e
+'citation()' para saber como citar o R ou pacotes do R em publicações.
+
+Digite 'demo()' para demonstrações, 'help()' para o sistema on-line de ajuda,
+ou 'help.start()' para abrir o sistema de ajuda em HTML no seu navegador.
+Digite 'q()' para sair do R.
+
+[Área de trabalho anterior carregada]
+
+> pacotes <- c("yaml", "readr", "glue", "jsonlite", "glmnet", "ggplot2")
+> source("funcoes.R")
+> instala_pacotes(pacotes)
+> lapply(pacotes, library, character.only = TRUE)
+Carregando pacotes exigidos: Matrix
+Loaded glmnet 4.1-8
+[[1]]
+[1] "yaml"      "stats"     "graphics"  "grDevices" "utils"     "datasets" 
+[7] "methods"   "base"     
+
+[[2]]
+[1] "readr"     "yaml"      "stats"     "graphics"  "grDevices" "utils"    
+[7] "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "glue"      "readr"     "yaml"      "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "jsonlite"  "glue"      "readr"     "yaml"      "stats"     "graphics" 
+ [7] "grDevices" "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "glmnet"    "Matrix"    "jsonlite"  "glue"      "readr"     "yaml"     
+ [7] "stats"     "graphics"  "grDevices" "utils"     "datasets"  "methods"  
+[13] "base"     
+
+[[6]]
+ [1] "ggplot2"   "glmnet"    "Matrix"    "jsonlite"  "glue"      "readr"    
+ [7] "yaml"      "stats"     "graphics"  "grDevices" "utils"     "datasets" 
+[13] "methods"   "base"     
+
+Warning messages:
+1: package 'glmnet' was built under R version 4.3.3 
+2: package 'Matrix' was built under R version 4.3.3 
+> 
+> #usethis::use_readme_rmd()
+> 
+> config = read_yaml("config.yaml")
+> 
+> dados = read_csv(glue("entradas/{config$tabela}"))
+New names:
+• `` -> `...1`
+Rows: 150 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): Species
+dbl (5): ...1, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> 
+> source("treinamento.R")
+
+Attaching package: 'vroom'
+
+The following objects are masked from 'package:readr':
+
+    as.col_spec, col_character, col_date, col_datetime, col_double,
+    col_factor, col_guess, col_integer, col_logical, col_number,
+    col_skip, col_time, cols, cols_condense, cols_only, date_names,
+    date_names_lang, date_names_langs, default_locale, fwf_cols,
+    fwf_empty, fwf_positions, fwf_widths, locale, output_column,
+    problems, spec
+
+New names:
+• `` -> `...1`
+Rows: 150 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): Species
+dbl (5): ...1, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> source("predicao.R")
+> source("grafico.R")
+Saving 7 x 7 in image
+> 
+> proc.time()
+  usuário   sistema decorrido 
+     4.15      0.68      4.84 
