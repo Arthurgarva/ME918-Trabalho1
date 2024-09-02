@@ -12,3 +12,4 @@ dados = read_csv(glue("entradas/{config$tabela}"))
 source("treinamento.R")
 source("predicao.R")
 source("grafico.R")
+

@@ -51,6 +51,10 @@ O formato deve seguir o seguinte padrão:
 
 -**grafico_predicoes.pdf** (gráfico dos valores da variável de interesse do banco de dados comparados aos valores preditos para as mesmas observações pelo modelo geraddo, com interceptos no eixo x para as predições das novas observações)
 
+-**grafico_predicoes_ic.pdf** (gráfico semelhante ao anterior porém adiciona um intervalo de confiança com alpha de 0.05)
+
+-**grafico_predicoes_residuos.pdf** (gráfico do contraste dos resíduos (diferença entre valores observados e preditos) contra os valores preditos. Serve para verificar a homocedasticidade e a adequação do modelo.)
+
 -**modeloajustado.rds** (o modelo ajustado em formato rds)
 
 -**predicoes.json** (as predições da variável de interesse para as novas observações)

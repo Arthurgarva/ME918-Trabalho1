@@ -1,26 +1,26 @@
 {
-    "id": "9700438D",
-    "path": "~/GitHub/ME918-Trabalho1/main.R",
-    "project_path": "main.R",
+    "id": "8E06D538",
+    "path": "~/GitHub/ME918-Trabalho1/grafico.R",
+    "project_path": "grafico.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "917423400",
     "contents": "",
     "dirty": false,
-    "created": 1725312701567.0,
+    "created": 1725318463466.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 8,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "14,0",
-        "scrollLine": "0"
+        "cursorPosition": "25,26",
+        "scrollLine": "13"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725318783,
+    "lastKnownWriteTime": 1725319207,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725318783150,
+    "last_content_update": 1725319207624,
     "read_only": false,
     "read_only_alternatives": []
 }
