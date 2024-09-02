@@ -1,4 +1,5 @@
 tabela: iris.csv
+dadosjson: novos_dados.json
 metodo: lasso
 lambda: 
 colunas:

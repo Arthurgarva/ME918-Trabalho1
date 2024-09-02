@@ -11,34 +11,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ME918-Trabalho1
+# trabprod1nova
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-Passos para rodar seu produto:
+The goal of trabprod1nova is to ...
 
-1)Adicione seu banco de dados ".csv" a pasta "entradas".
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-2)Abra o arquivo "config.yaml" e altere as variáveis como a seguir:
+```{r cars}
+summary(cars)
+```
 
-tabela: banco_de_dados.csv (nome do arquivo de banco de dados)
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
 
-dadosjson: novos_dados.json (nome do arquivo .json que vai adicionar os valores das variáveis preditoras que serão utilizadas para gerar a preditiva. Ou altere os nomes das variáveis e dos valores pelos do seu banco de dados )
+You can also embed plots, for example:
 
-metodo: "linear" ou "lasso" (tipo de regressão desejada)
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
 
-lambda: número desejado ou deixe em branco se quiser fazer a validação cruzada
-(somente nescessario no caso da regressão lasso)
-
-colunas:
-  preditiva:
-   - nome da coluna que deseja predizer
-  preditoras:(quantas colunas quiser)
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
-   
-3)Abra e rode o arquivo "main.R". 
-
-4)Encontre seus resultados na pasta saída.
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub.

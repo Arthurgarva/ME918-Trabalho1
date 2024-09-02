@@ -3,8 +3,7 @@ library(jsonlite)
 config = read_yaml("config.yaml")
 
 modelo = readRDS("saidas/modeloajustado.rds")
-
-novos_dados = fromJSON("entradas/novos_dados.json")
+novos_dados = fromJSON(glue("entradas/{config$dadosjson}"))
 X_novos = as.data.frame(novos_dados)
 
 if (inherits(modelo, "lm")) {
