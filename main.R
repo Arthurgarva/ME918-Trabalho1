@@ -3,7 +3,7 @@ library(readr)
 library(glue)
 library(jsonlite)
 library(glmnet)
-
+usethis::use_readme_rmd()
 source("funcoes.R")
 
 config = read_yaml("config.yaml")

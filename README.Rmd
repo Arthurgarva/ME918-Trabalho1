@@ -22,23 +22,35 @@ Passos para rodar seu produto:
 
 2)Abra o arquivo "config.yaml" e altere as variáveis como a seguir:
 
-tabela: banco_de_dados.csv (nome do arquivo de banco de dados)
+tabela: banco_de_dados.csv (nome do arquivo do seu banco de dados)
 
-dadosjson: novos_dados.json (nome do arquivo .json que vai adicionar os valores das variáveis preditoras que serão utilizadas para gerar a preditiva. Ou altere os nomes das variáveis e dos valores pelos do seu banco de dados )
+dadosjson: novos_dados.json (nome do arquivo .json que vai adicionar com os valores das variáveis preditoras que serão utilizadas para gerar a preditiva. )
+O formato deve seguir o seguinte padrão:
+[
+{"Variavel 1": valor da variavel 1, "Variavel 2": valor da variavel 2, "Variavel n": valor da variavel n},
+  {"Variavel 1": valor da variavel 1, "Variavel 2": valor da variavel 2, "Variavel n": valor da variavel n},
+  {"Variavel 1": valor da variavel 1, "Variavel 2": valor da variavel 2, "Variavel n": valor da variavel n}
+]
 
 metodo: "linear" ou "lasso" (tipo de regressão desejada)
 
-lambda: número desejado ou deixe em branco se quiser fazer a validação cruzada
+lambda: número desejado para lambda ou deixe em branco se quiser fazer a validação cruzada
 (somente nescessario no caso da regressão lasso)
 
 colunas:
   preditiva:
    - nome da coluna que deseja predizer
   preditoras:(quantas colunas quiser)
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
-   - nome de uma das colunas que deseja utilizar para predizer a preditiva
+   - nome da variável 1 que deseja utilizar para predizer a preditiva 
+   - nome da variável 2 que deseja utilizar para predizer a preditiva 
+   - nome da variável n que deseja utilizar para predizer a preditiva 
    
-3)Abra e rode o arquivo "main.R". 
+3)Abra e rode todas as linhas do arquivo "main.R". 
 
-4)Encontre seus resultados na pasta saída.
+4)Na pasta saída serão encontrados os resultados do seu produto:
+
+-grafico_predicoes.pdf (gráfico dos valores da variável de interesse do banco de dados comparados aos valores preditos para as mesmas observações pelo modelo geraddo, com interceptos no eixo x para as predições das novas observações)
+
+-modeloajustado.rds (o modelo ajustado em formato rds)
+
+-predicoes.json (as predições da variável de interesse para as novas observações)
