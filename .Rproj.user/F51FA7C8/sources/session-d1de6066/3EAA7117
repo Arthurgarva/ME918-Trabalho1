@@ -3,7 +3,7 @@
     "path": "~/GitHub/ME918-Trabalho1/entradas/novos_dados.json",
     "project_path": "entradas/novos_dados.json",
     "type": "json",
-    "hash": "0",
+    "hash": "623073833",
     "contents": "",
     "dirty": false,
     "created": 1725312875195.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "0,0",
+        "cursorPosition": "1,38",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725311958,
+    "lastKnownWriteTime": 1725314680,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725311958,
+    "last_content_update": 1725314680144,
     "read_only": false,
     "read_only_alternatives": []
 }
