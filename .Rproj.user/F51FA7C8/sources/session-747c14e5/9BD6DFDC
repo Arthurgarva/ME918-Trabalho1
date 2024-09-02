@@ -3,7 +3,7 @@
     "path": "~/GitHub/ME918-Trabalho1/funcoes.R",
     "project_path": "funcoes.R",
     "type": "r_source",
-    "hash": "103930450",
+    "hash": "3875358363",
     "contents": "",
     "dirty": false,
     "created": 1725315908775.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "26,38",
+        "cursorPosition": "22,17",
         "scrollLine": "9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725316140,
+    "lastKnownWriteTime": 1725317080,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725316140150,
+    "last_content_update": 1725317080546,
     "read_only": false,
     "read_only_alternatives": []
 }
