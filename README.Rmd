@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 
 # ME918-Trabalho1
 
+Este programa serve para fazer uma regressão linear, lasso ou ridge, baseado em um banco de dados de treinamento em formato .csv. Também server para gerar predições através da inserção de novos dados. Após executado ele retorna uma série de arquivos que te ajudarão na sua análise.
 
 Passos para rodar seu produto:
 
@@ -37,7 +38,7 @@ O formato deve seguir o seguinte padrão:
 **lambda:** número desejado para lambda ou deixe em branco se quiser fazer a validação cruzada
 (somente necessario no caso da regressão lasso e ridge)
 
-**colunas:**<br>
+**colunas:** (não escrever nada) <br> 
   **preditiva:** <br>
    - nome da coluna que deseja predizer <br>
   **preditoras:** <br>
