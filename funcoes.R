@@ -38,9 +38,9 @@ modelo_ridge = function(tabela,preditiva,preditoras,lambda){
 }
 
 instala_pacotes = function(pacotes) {
-  faltantes_pacotes <- setdiff(pacotes, rownames(installed.packages()))
+  pacotes_faltantes <- setdiff(pacotes, rownames(installed.packages()))
   
-  if (length(faltantes_pacotes) > 0) {
-    install.packages(faltantes_pacotes, dependencies = TRUE, type = "binary")
+  if (length(pacotes_faltantes) > 0) {
+    install.packages(pacotes_faltantes, dependencies = TRUE, type = "binary")
   }
 }

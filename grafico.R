@@ -1,5 +1,3 @@
-
-
 if (inherits(modelo, "lm")) {
   predicoes_dados = predict(modelo, newdata = dados[,config$colunas$preditoras])
 } else if (inherits(modelo, "glmnet")) {
