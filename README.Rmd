@@ -35,7 +35,7 @@ O formato deve seguir o seguinte padrão:
 **metodo:** "linear","lasso" ou "ridge" (tipo de regressão desejada)
 
 **lambda:** número desejado para lambda ou deixe em branco se quiser fazer a validação cruzada
-(somente nescessario no caso da regressão lasso)
+(somente necessario no caso da regressão lasso e ridge)
 
 **colunas:**<br>
   **preditiva:** <br>
